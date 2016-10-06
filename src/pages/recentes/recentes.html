@@ -1,0 +1,34 @@
+
+<ion-content padding>
+  <ion-searchbar [(ngModel)]="query" (ionInput)="search()">
+
+  </ion-searchbar>
+  <ion-card *ngFor="let movie of movies"><!-- diretiva do angular -->
+    <ion-card-content>
+     <div class="poster">
+      <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}"/>
+     </div>
+     <ion-card-title text-center>
+       {{movie.title}}
+     </ion-card-title> 
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button clear icon-left>
+          <ion-icon name="star"></ion-icon>
+          <div>
+            Favorito
+          </div>
+        </button>
+      </ion-col>
+        <button ion-button clear icon-left (click)="goToDetalhes(movie);">
+          <ion-icon name="search"></ion-icon>
+          <div>
+            Detalhes
+          </div>
+        </button>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

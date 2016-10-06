@@ -1,0 +1,10 @@
+page-recentes {
+    ion-content.content-md {//content-md é a classe do ion-content
+        background-color: #EEE;
+
+        .poster {
+            height: 200px;
+            overflow: hidden;
+        }
+    }
+}
